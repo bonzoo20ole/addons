@@ -38,3 +38,33 @@ schema:
     - str
   ssh_keys:
     - str
+modbus:
+  - name: "SAJ_H1"
+    type: tcp
+    host: 192.168.10.118  # ← CAMBIA esto por la IP de tu AIO3
+    port: 502
+    sensors:
+      - name: "SAJ H1 Potencia Actual"
+        unit_of_measurement: "W"
+        address: 3004
+        input_type: input
+
+      - name: "SAJ H1 Energía Hoy"
+        unit_of_measurement: "kWh"
+        address: 3014
+        input_type: input
+
+      - name: "SAJ H1 Voltaje AC"
+        unit_of_measurement: "V"
+        address: 3033
+        input_type: input
+
+      - name: "SAJ H1 Frecuencia AC"
+        unit_of_measurement: "Hz"
+        address: 3034
+        input_type: input
+
+      - name: "SAJ H1 Temperatura"
+        unit_of_measurement: "°C"
+        address: 3041
+        input_type: input
